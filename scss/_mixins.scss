@@ -25,6 +25,13 @@ $all-buttons-list: 'button',
 'input[type="submit"]';
 
 //
+// Pixels to rems function
+//
+@function px2rem($px) {
+	@return ($px / $base-font-size) * 1em;
+}
+
+//
 // Pixels to ems function
 //
 @function px2em($px) {
