@@ -63,6 +63,11 @@ body {
 			a {
 				text-decoration: none;
 				color: inherit;
+				transition: .3s color;
+
+				&:hover {
+					color: #64c29e;
+				}
 			}
 		}
 	}
@@ -146,7 +151,12 @@ body {
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+	transition: .3s;
 	z-index: 122222;
+
+	&:hover {
+		transform: translate(-50%, -50%) scale(1.1);
+	}
 }
 
 .text-box {
@@ -243,10 +253,11 @@ body {
 
 .comments {
 	text-align: center;
-	max-width: 1600px;
-	padding: 60px 40px;
+	//max-width: 1600px;
+	//padding: 60px 40px;
+	margin: auto;
 	@include mq(desktop) {
-		padding: 124px 304px 68px;
+		//padding: 124px 304px 68px;
 	}
 
 	i {
@@ -256,6 +267,41 @@ body {
 		display: block;
 	}
 }
+
+//test
+
+@keyframes move {
+	0% {
+		transform: translate(0);
+	}
+
+	33% {
+		transform: translate(-33.3%);
+	}
+
+	66% {
+		transform: translate(-66.6%);
+	}
+
+	100% {
+		transform: translate(0);
+	}
+}
+
+.wrap-test {
+	max-width: 300%;
+	width: 300%;
+	display: flex;
+	padding: 60px 0;
+	animation: move 28s 5s infinite;
+
+}
+
+.first {
+	width: 100%;
+}
+
+/////
 
 .blockquote {
 	p {
@@ -301,5 +347,24 @@ body {
 			background-color: #a9afb3;
 		}
 	}
+}
 
+.discovery {
+	background-color: #282f35;
+
+}
+
+.discovery-button {
+	padding: 75px 0;
+	display: flex;
+	justify-content: center;
+
+	a {
+		padding: 20px 58px;
+		color: #fff;
+		border: 1px solid #fff;
+		box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+		text-transform: uppercase;
+		text-decoration: none;
+	}
 }
