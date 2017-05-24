@@ -253,6 +253,7 @@ body {
 
 .comments {
 	text-align: center;
+	overflow-x: hidden;
 	//max-width: 1600px;
 	//padding: 60px 40px;
 	margin: auto;
@@ -275,12 +276,18 @@ body {
 		transform: translate(0);
 	}
 
-	33% {
+	25% {
 		transform: translate(-33.3%);
+
 	}
 
-	66% {
+	50% {
 		transform: translate(-66.6%);
+
+	}
+
+	75% {
+		transform: translate(-33.3%);
 	}
 
 	100% {
@@ -293,8 +300,7 @@ body {
 	width: 300%;
 	display: flex;
 	padding: 60px 0;
-	animation: move 28s 5s infinite;
-
+	//animation: move 10s 2s infinite;
 }
 
 .first {
@@ -366,5 +372,77 @@ body {
 		box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 		text-transform: uppercase;
 		text-decoration: none;
+	}
+}
+
+.newsletter {
+	background-color: #fff;
+	padding: 110px 0;
+	display: flex;
+	text-align: center;
+
+	img {
+		margin-bottom: 20px;
+	}
+
+	p {
+		font-size: px2rem(24px);
+		font-weight: 300;
+		color: $text-color;
+		margin-bottom: 40px;
+	}
+}
+
+form{
+	display: flex;
+	
+	input {
+		line-height: 70px;
+		outline: 1px solid #d3d7d9;
+		font-size: px2rem(16px);
+		padding: 0 25px;
+		color: $text-color;
+		font-style: italic;
+		font-weight: 300;
+
+		@include mq(tablet) {
+			width: 250px;
+		}
+
+		@include mq(desktop) {
+			width: 350px;
+		}
+		
+		&::placeholder {
+			color: $text-color;
+			font-weight: 300;
+		}
+		
+		
+	}
+
+	button {
+		margin-left: 8px;
+		line-height: 70px;
+		width: 100px;
+		background-color: #64c29e;
+		color: #fff;
+		font-size: px2rem(18px);
+		transition: .3s background-color;
+
+		@include mq(tablet) {
+			width: 125px;
+		}
+
+
+		&:focus {
+			outline: none;
+		}
+
+		&:hover {
+			background-color: #24b67e;
+			cursor: pointer;
+
+		}
 	}
 }
