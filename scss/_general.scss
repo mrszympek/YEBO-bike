@@ -457,15 +457,18 @@ form {
 .footer > .wrap {
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
+	justify-content: center;
 	color: $text-color;
 
-	@include mq(desktop) {
+	@include mq(tablet) {
 		flex-direction: row;
 	}
 }
 
 .address {
+	display: flex;
+	justify-self: flex-start;
+	flex: 1;
 	font-weight: 400;
 	padding: 20px;
 
@@ -479,6 +482,7 @@ form {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	flex: 1;
 	margin: 24px 0;
 
 	li {
@@ -511,8 +515,11 @@ form {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	justify-self: flex-end;
+	flex: 1;
 
 	a {
 		margin-left: 10px;
 	}
 }
+
