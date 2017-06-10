@@ -262,10 +262,10 @@ body {
 	}
 
 	i {
-		font-size: 30px;
+		font-size: 30px !important;
 		color: #56c7ee;
 		margin-bottom: 37px;
-		display: block;
+		background-color: transparent;
 	}
 }
 
@@ -393,9 +393,9 @@ body {
 	}
 }
 
-form{
+form {
 	display: flex;
-	
+
 	input {
 		line-height: 70px;
 		outline: 1px solid #d3d7d9;
@@ -412,13 +412,12 @@ form{
 		@include mq(desktop) {
 			width: 350px;
 		}
-		
+
 		&::placeholder {
 			color: $text-color;
 			font-weight: 300;
 		}
-		
-		
+
 	}
 
 	button {
@@ -434,7 +433,6 @@ form{
 			width: 125px;
 		}
 
-
 		&:focus {
 			outline: none;
 		}
@@ -444,5 +442,77 @@ form{
 			cursor: pointer;
 
 		}
+	}
+}
+
+.footer {
+
+	padding: 20px auto;
+
+	@include mq(desktop) {
+		padding: 98px 0;
+	}
+}
+
+.footer > .wrap {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	color: $text-color;
+
+	@include mq(desktop) {
+		flex-direction: row;
+	}
+}
+
+.address {
+	font-weight: 400;
+	padding: 20px;
+
+	p {
+		font-size: px2rem(14px);
+	}
+
+}
+
+.social-buttons {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 24px 0;
+
+	li {
+		padding: 0 10px;
+	}
+}
+
+.fa {
+	font-size: 24px !important;
+	color: #fff;
+	text-align: center;
+	width: 24px;
+	padding: 10px;
+	border-radius: 50%;
+}
+
+.fa-facebook {
+	background-color: #537bbd;
+}
+
+.fa-twitter {
+	background-color: #78cdf0;
+}
+
+.fa-pinterest {
+	background-color: #eb5755;
+}
+
+.sign {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	a {
+		margin-left: 10px;
 	}
 }
